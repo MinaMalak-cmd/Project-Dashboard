@@ -1,0 +1,44 @@
+﻿@model List<Project_Dashboard.Models.Project>
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card-header">
+    <i class="fas fa-table mr-1"></i>
+    Projects 
+</div>
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Project Id</th>
+                    <th>Project Name</th>
+                    <th>Project Location</th>
+                    <th>Project Description</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.name</td>
+                    <td>@item.location</td>                    
+                    <td>
+                        @item.description                    
+                    </td>
+                    <td>
+                        
+                        @Html.ActionLink("edit", "editProject", new { id = item.id })
+                        @Html.ActionLink("Delete", "deleteProject", new { id = item.id },new {onclick= "return confirm('are you sure to delete " + item.name + "')" })
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

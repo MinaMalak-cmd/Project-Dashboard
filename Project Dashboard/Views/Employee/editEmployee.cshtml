@@ -1,0 +1,57 @@
+﻿@using Project_Dashboard.Models
+@model Employee
+@{
+    ViewBag.Title = "Edit Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card-header">
+    <i class="fas fa-table mr-1"></i>
+    Edit Employee
+</div>
+<div class="card-body">
+    <div class="container">
+        <form method="post">
+            <input type="hidden" name="empId" value="@Model.empId" />
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" value="@Model.name" placeholder="Employee Name">
+            </div>
+            <div class="form-group">
+                <label for="location">Address</label>
+                <input type="text" class="form-control" value="@Model.address" name="address" placeholder="Employee Address">
+            </div>
+            <div class="form-group">
+                <label for="desc">Salary</label>
+                <input type="text" class="form-control" value="@Model.salary" name="salary" placeholder="Employee Salary">
+            </div>
+            <div class="form-group">
+                <label for="desc">HireDate</label>
+                <input type="date" class="form-control" value="@Model.hiredate" name="hiredate" placeholder="Employee HireDate">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="deptId">Choose Department</label>
+                    <select name="deptId" class="form-control">
+                        @foreach (var item in (List<Department>)ViewBag.depts)
+                        {
+                            if (item.deptId == Model.deptId)
+                            {
+                                <option selected value="@item.deptId">@item.name</option>
+                            }
+
+                            else
+                            {
+                                <option value="@item.deptId">@item.name</option>
+                            }
+
+                        }
+                    </select>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary w-50 m-auto">Save Changes</button>
+        </form>
+    </div>
+</div>

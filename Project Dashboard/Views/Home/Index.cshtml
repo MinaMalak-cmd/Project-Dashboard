@@ -1,0 +1,39 @@
+﻿@using Project_Dashboard.Models
+@{
+    ViewBag.Title = "Departments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<div class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+</div>*@
+
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+            Department Table
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Department Id</th>
+                        <th>Department Name</th>
+                        <th>Department Location</th>
+                        @*<th>Projects Names</th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in (List<Department>)ViewBag.depts)
+                    {
+                    <tr>
+                        <td>@item.deptId</td>
+                        <td>@item.name</td>
+                        <td>@item.location</td>
+                        @*<td>@item.Projects[0].name</td>*@                      
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
