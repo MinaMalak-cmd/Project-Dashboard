@@ -128,9 +128,6 @@
     <Content Include="content\scripts\sb-watch.js" />
     <Content Include="content\scripts\start-debug.js" />
     <Content Include="content\scripts\start.js" />
-    <Content Include="content\src\assets\demo\chart-area-demo.js" />
-    <Content Include="content\src\assets\demo\chart-bar-demo.js" />
-    <Content Include="content\src\assets\demo\chart-pie-demo.js" />
     <Content Include="content\src\assets\demo\datatables-demo.js" />
     <Content Include="content\src\assets\img\error-404-monochrome.svg" />
     <Content Include="content\src\js\scripts.js" />
@@ -163,9 +160,7 @@
     <Content Include="content\LICENSE" />
     <Content Include="content\package-lock.json" />
     <Content Include="content\package.json" />
-    <Content Include="content\src\pug\layouts\authentication.pug" />
     <Content Include="content\src\pug\layouts\dashboard.pug" />
-    <Content Include="content\src\pug\layouts\error.pug" />
     <Content Include="content\src\pug\layouts\includes\footer.pug" />
     <Content Include="content\src\pug\layouts\includes\head\css.pug" />
     <Content Include="content\src\pug\layouts\includes\head\icons.pug" />
@@ -174,10 +169,6 @@
     <Content Include="content\src\pug\layouts\includes\navigation\sidenav.pug" />
     <Content Include="content\src\pug\layouts\includes\navigation\topnav.pug" />
     <Content Include="content\src\pug\layouts\includes\scripts.pug" />
-    <Content Include="content\src\pug\pages\401.pug" />
-    <Content Include="content\src\pug\pages\404.pug" />
-    <Content Include="content\src\pug\pages\500.pug" />
-    <Content Include="content\src\pug\pages\charts.pug" />
     <Content Include="content\src\pug\pages\includes\datatable.pug" />
     <Content Include="content\src\pug\pages\includes\page-header.pug" />
     <Content Include="content\src\pug\pages\index.pug" />
@@ -240,7 +231,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49330</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49330/</IISUrl>
+          <IISUrl>http://localhost:49331/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:49331/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
